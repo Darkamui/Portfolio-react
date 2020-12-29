@@ -11,7 +11,9 @@ const GlobalStyles = createGlobalStyle`
 html {
     scroll-behavior: smooth;
 }
-
+.nani{
+    overflow:hidden;
+}
 img {
     display: block;
     max-width: 100%;

@@ -2,24 +2,36 @@ import React from "react";
 import danny from "../img/n2.jpg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { fadeReverse } from "../animation";
 
 export default function AboutSection() {
-	return (
-		<About id='moi'>
-			<h2>Qui Suis-Je ?</h2>
-			<p className='pyou'>Développeur Full-Stack Junior</p>
+	const [element, controls] = useScroll();
 
-			<div>
-				<p className='movetop'>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum,
-					itaque!
-				</p>
-				<p className='movetop'>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, enim.
-				</p>
-			</div>
-			<IntroImg src={danny}></IntroImg>
-		</About>
+	return (
+		<div className='nani'>
+			<About
+				id='moi'
+				variants={fadeReverse}
+				animate={controls}
+				ref={element}
+				initial='hidden'>
+				<h2>Qui Suis-Je ?</h2>
+				<p className='pyou'>Dévelopeur Full-Stack Junior</p>
+
+				<div>
+					<p className='movetop'>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum,
+						itaque!
+					</p>
+					<p className='movetop'>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
+						enim.
+					</p>
+				</div>
+				<IntroImg src={danny}></IntroImg>
+			</About>
+		</div>
 	);
 }
 

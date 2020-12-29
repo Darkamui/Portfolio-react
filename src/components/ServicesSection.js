@@ -2,55 +2,65 @@ import React from "react";
 import covery from "../img/services2.jpg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { fadeReverse } from "../animation";
 
 export default function ServicesSection() {
+	const [element, controls] = useScroll();
 	return (
-		<MyServices id='connaissances'>
-			<h2>Mes Connaissances</h2>
-			<Services>
-				<Service>
-					<h3>Front-End</h3>
-					<div>
-						<i class='fab fa-react'> React</i>
-					</div>
-					<div>
-						<i class='fab fa-html5'> HTML5</i>
-					</div>
-					<div>
-						<i class='fab fa-css3-alt'> CSS3</i>
-					</div>
-					<div>
-						<i class='fab fa-js-square'> JavaScript</i>
-					</div>
-					<div>
-						<i class='fab fa-sass'> SASS</i>
-					</div>
-				</Service>
+		<div className='nani'>
+			<MyServices
+				variants={fadeReverse}
+				animate={controls}
+				initial='hidden'
+				ref={element}
+				id='connaissances'>
+				<h2>Mes Connaissances</h2>
+				<Services>
+					<Service>
+						<h3>Front-End</h3>
+						<div>
+							<i class='fab fa-react'> React</i>
+						</div>
+						<div>
+							<i class='fab fa-html5'> HTML5</i>
+						</div>
+						<div>
+							<i class='fab fa-css3-alt'> CSS3</i>
+						</div>
+						<div>
+							<i class='fab fa-js-square'> JavaScript</i>
+						</div>
+						<div>
+							<i class='fab fa-sass'> SASS</i>
+						</div>
+					</Service>
 
-				<Service>
-					<h3>Back-End</h3>
-					<div>
-						<i class='fab fa-node-js'> Node JS</i>
-					</div>
-					<div>
-						<i class='fab fa-envira'> MongoDB</i>
-					</div>
-					<div>
-						<i class='fas fab fa-database'> SQL</i>
-					</div>
-				</Service>
+					<Service>
+						<h3>Back-End</h3>
+						<div>
+							<i class='fab fa-node-js'> Node JS</i>
+						</div>
+						<div>
+							<i class='fab fa-envira'> MongoDB</i>
+						</div>
+						<div>
+							<i class='fas fab fa-database'> SQL</i>
+						</div>
+					</Service>
 
-				<Service>
-					<h3>En Apprentissage</h3>
-					<div>
-						<i class='fab fa-vuejs'> Vue.JS</i>
-					</div>
-					<div>
-						<i class='fab fa-angular'> Angular</i>
-					</div>
-				</Service>
-			</Services>
-		</MyServices>
+					<Service>
+						<h3>En Apprentissage</h3>
+						<div>
+							<i class='fab fa-vuejs'> Vue.JS</i>
+						</div>
+						<div>
+							<i class='fab fa-angular'> Angular</i>
+						</div>
+					</Service>
+				</Services>
+			</MyServices>
+		</div>
 	);
 }
 

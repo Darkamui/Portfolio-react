@@ -9,7 +9,7 @@ export default function TitleSection() {
 			<h1>
 				Bonjour, Ici<strong>Daniel Jerusalmy</strong>
 			</h1>
-			<p>Développeur Full-Stack Junior</p>
+			<p>Dévelopeur Full-Stack Junior</p>
 			<IntroImg src={danny}></IntroImg>
 		</Intro>
 	);

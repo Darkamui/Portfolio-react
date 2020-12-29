@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../img/jerumedia.png";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
 	const testy = () => {
@@ -11,7 +12,9 @@ export default function Nav() {
 	return (
 		<header>
 			<div class='logo'>
-				<img src={logo} alt='' />
+				<Link to='/work'>
+					<img src={logo} alt='' />
+				</Link>
 			</div>
 			<button class='nav-toggle' onClick={testy} aria-label='toggle navigation'>
 				<span class='hamburger'></span>
@@ -34,9 +37,9 @@ export default function Nav() {
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
-						<a href='#moi' class='nav__link'>
+						<Link to='/work' class='nav__link'>
 							Qui suis-je ?
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</nav>

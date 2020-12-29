@@ -1,31 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
 
 export default function Footer() {
+	const [element, controls] = useScroll();
 	return (
-		<StyledFooter>
-			<a href='mailto:dannyerushalmi@gmail.com' class='footer__link'>
-				dannyerushalmi@gmail.com
-			</a>
-			<ul class='social-list'>
-				<li class='social-list__item'>
-					<a href='/' class='social-list__link'>
-						<i class='fab fa-facebook'></i>
-					</a>
-				</li>
-				<li class='social-list__item'>
-					<a href='/' class='social-list__link'>
-						<i class='fab fa-linkedin'></i>
-					</a>
-				</li>
-				<li class='social-list__item'>
-					<a href='/' class='social-list__link'>
-						<i class='fab fa-github'></i>
-					</a>
-				</li>
-			</ul>
-		</StyledFooter>
+		<div className='nani'>
+			<StyledFooter
+				variants={fade}
+				initial='hidden'
+				animate={controls}
+				ref={element}>
+				<a href='mailto:dannyerushalmi@gmail.com' class='footer__link'>
+					dannyerushalmi@gmail.com
+				</a>
+				<ul class='social-list'>
+					<li class='social-list__item'>
+						<a href='/' class='social-list__link'>
+							<i class='fab fa-facebook'></i>
+						</a>
+					</li>
+					<li class='social-list__item'>
+						<a href='/' class='social-list__link'>
+							<i class='fab fa-linkedin'></i>
+						</a>
+					</li>
+					<li class='social-list__item'>
+						<a href='/' class='social-list__link'>
+							<i class='fab fa-github'></i>
+						</a>
+					</li>
+				</ul>
+			</StyledFooter>
+		</div>
 	);
 }
 

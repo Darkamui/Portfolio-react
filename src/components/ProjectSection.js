@@ -8,9 +8,19 @@ import igniteDesktop from "../img/ignite-desktop.png";
 import igniteMobile from "../img/ignite-mobile.png";
 import jerusalmyDesktop from "../img/jerusalmy-desktop.png";
 import jerusalmyMobile from "../img/jerusalmy-mobile.png";
+
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
+
 export default function ProjectSection() {
+	const [element, controls] = useScroll();
 	return (
-		<Projects id='projets'>
+		<Projects
+			id='projets'
+			variants={fade}
+			animate={controls}
+			initial='hidden'
+			ref={element}>
 			<h2>Mes Projets</h2>
 			<Portfolio>
 				<PortfolioItem href='/'>
@@ -147,6 +157,10 @@ const Portfolio = styled(motion.div)`
 	}
 	@media (min-width: 700px) {
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	}
+	img {
+		display: block;
+		max-width: 100%;
 	}
 `;
 
