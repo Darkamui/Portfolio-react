@@ -1,6 +1,4 @@
 import React from "react";
-import hoodie from "../img/hoodie.jpeg";
-import hats from "../img/hats.jpeg";
 import coverLong from "../img/projecttemp.png";
 import styled from "styled-components";
 import { motion } from "framer-motion";
