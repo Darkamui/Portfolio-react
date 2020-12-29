@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
 	return (
-		<Intro>
-			<h1>Qui Suis-Je ?</h1>
+		<About id='moi'>
+			<h2>Qui Suis-Je ?</h2>
 			<p className='pyou'>Développeur Full-Stack Junior</p>
 
 			<div>
@@ -19,18 +19,28 @@ export default function AboutSection() {
 				</p>
 			</div>
 			<IntroImg src={danny}></IntroImg>
-		</Intro>
+		</About>
 	);
 }
 
-const Intro = styled(motion.div)`
-	padding: 2em;
-	max-width: 750px;
+const About = styled(motion.div)`
+	padding: 2em 0;
+	max-width: 200px;
 	margin: 0 auto;
+	.pyou {
+		background: #16e0bd;
+		margin: 1em 0;
+	}
+	p:first-child {
+		margin-bottom: 1em;
+	}
+	@media (min-width: 450px) {
+		max-width: 300px;
+	}
 	@media (min-width: 700px) {
 		padding: 5em 0;
 		display: grid;
-
+		max-width: 850px;
 		grid-gap: 1em;
 		grid-template-areas:
 			"title img"
@@ -51,9 +61,9 @@ const Intro = styled(motion.div)`
 			text-align: left;
 			position: relative;
 			top: -3em;
-			width: calc(100% + 5em) !important;
+			width: calc(100% + 1em) !important;
 			left: 0em;
-			padding-left: 1em;
+			padding-left: 0.25em;
 			padding-right: calc(250px + 3em);
 			font-size: 1.65rem;
 			font-family: "Inconsolata", monospace;
@@ -73,7 +83,7 @@ const IntroImg = styled(motion.img)`
 		grid-area: img;
 		max-width: 300px;
 		position: relative;
-		left: 10em;
+
 		z-index: 2;
 	}
 `;

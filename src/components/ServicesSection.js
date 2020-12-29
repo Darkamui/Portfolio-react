@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesSection() {
 	return (
-		<MyServices>
+		<MyServices id='connaissances'>
 			<h2>Mes Connaissances</h2>
 			<Services>
 				<Service>

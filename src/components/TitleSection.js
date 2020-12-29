@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function TitleSection() {
 	return (
-		<Intro>
+		<Intro id='accueil'>
 			<h1>
 				Bonjour, Ici<strong>Daniel Jerusalmy</strong>
 			</h1>
@@ -40,7 +40,7 @@ const Intro = styled(motion.div)`
 	p {
 	}
 
-	@media (min-width: 600px) {
+	@media (min-width: 700px) {
 		display: grid;
 		width: min-content;
 		margin: 0 auto;

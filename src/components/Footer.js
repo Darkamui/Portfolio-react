@@ -34,7 +34,7 @@ const StyledFooter = styled(motion.footer)`
 	color: #16e0bd;
 	text-align: center;
 	padding: 2em 0;
-	font-size: 2em;
+	font-size: 1em;
 	a {
 		color: #16e0bd;
 		font-weight: bold;
@@ -55,5 +55,11 @@ const StyledFooter = styled(motion.footer)`
 	}
 	li a {
 		padding: 0.5em;
+	}
+	@media (min-width: 700px) {
+		font-size: 2em;
+	}
+	.social-list__link:hover {
+		color: red;
 	}
 `;

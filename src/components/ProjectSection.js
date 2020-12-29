@@ -10,7 +10,7 @@ import jerusalmyDesktop from "../img/jerusalmy-desktop.png";
 import jerusalmyMobile from "../img/jerusalmy-mobile.png";
 export default function ProjectSection() {
 	return (
-		<Projects>
+		<Projects id='projets'>
 			<h2>Mes Projets</h2>
 			<Portfolio>
 				<PortfolioItem href='/'>
@@ -102,7 +102,7 @@ export default function ProjectSection() {
 }
 
 const Projects = styled(motion.div)`
-	min-height: 90vh;
+	min-height: 80vh;
 	background: #303030;
 	color: #fff;
 	text-align: center;
@@ -124,10 +124,11 @@ const Projects = styled(motion.div)`
 
 const Portfolio = styled(motion.div)`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	max-width: 1300px;
 	margin: 0 auto;
 	gap: 3em;
+	padding: 0 1em;
 	.image-stack {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -143,6 +144,9 @@ const Portfolio = styled(motion.div)`
 	.image-stack__item--bottom {
 		grid-column: 2 / -1;
 		grid-row: 1; // make this image be on the same row
+	}
+	@media (min-width: 700px) {
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	}
 `;
 
@@ -164,7 +168,7 @@ const PortfolioItem = styled(motion.a)`
 	background: transparent;
 	overflow: hidden;
 
-	.portofolio-img:hover,
+	:hover,
 	:focus .portofolio-img {
 		transform: scale(1.25);
 		opacity: 0.75;
