@@ -11,6 +11,7 @@ import jerusalmyMobile from "../img/jerusalmy-mobile.png";
 
 import { useScroll } from "./useScroll";
 import { fade } from "../animation";
+import { Link } from "react-router-dom";
 
 export default function ProjectSection() {
 	const [element, controls] = useScroll();
@@ -23,49 +24,55 @@ export default function ProjectSection() {
 			ref={element}>
 			<h2>Mes Projets</h2>
 			<Portfolio>
-				<PortfolioItem href='/'>
-					<h6>FANCY Hand Fans</h6>
-					<div class='image-stack'>
-						<div class='image-stack__item image-stack__item--top'>
-							<img
-								src={fansMobile}
-								className='portofolio-img'
-								alt='A portrait of a girl under hanging flowers.'
-							/>
+				<Link to='/work'>
+					<PortfolioItem>
+						<h6>FANCY Hand Fans</h6>
+						<div class='image-stack'>
+							<div class='image-stack__item image-stack__item--top'>
+								<img
+									src={fansMobile}
+									className='portofolio-img'
+									alt='A portrait of a girl under hanging flowers.'
+								/>
+							</div>
+							<div class='image-stack__item image-stack__item--bottom'>
+								<img src={fansDesktop} className='portofolio-img' alt='' />
+							</div>
 						</div>
-						<div class='image-stack__item image-stack__item--bottom'>
-							<img src={fansDesktop} className='portofolio-img' alt='' />
+					</PortfolioItem>
+				</Link>
+				<Link to='/work'>
+					<PortfolioItem>
+						<h6>Raphaël Jerusalmy</h6>
+						<div class='image-stack'>
+							<div class='image-stack__item image-stack__item--top'>
+								<img
+									src={jerusalmyMobile}
+									alt='A portrait of a girl under hanging flowers.'
+								/>
+							</div>
+							<div class='image-stack__item image-stack__item--bottom'>
+								<img src={jerusalmyDesktop} alt='' />
+							</div>
 						</div>
-					</div>
-				</PortfolioItem>
-				<PortfolioItem href='/'>
-					<h6>Raphaël Jerusalmy</h6>
-					<div class='image-stack'>
-						<div class='image-stack__item image-stack__item--top'>
-							<img
-								src={jerusalmyMobile}
-								alt='A portrait of a girl under hanging flowers.'
-							/>
+					</PortfolioItem>
+				</Link>
+				<Link to='/work'>
+					<PortfolioItem>
+						<h6>RAWG API Game Library</h6>
+						<div class='image-stack'>
+							<div class='image-stack__item image-stack__item--top'>
+								<img
+									src={igniteMobile}
+									alt='A portrait of a girl under hanging flowers.'
+								/>
+							</div>
+							<div class='image-stack__item image-stack__item--bottom'>
+								<img src={igniteDesktop} alt='' />
+							</div>
 						</div>
-						<div class='image-stack__item image-stack__item--bottom'>
-							<img src={jerusalmyDesktop} alt='' />
-						</div>
-					</div>
-				</PortfolioItem>
-				<PortfolioItem href='/'>
-					<h6>RAWG API Game Library</h6>
-					<div class='image-stack'>
-						<div class='image-stack__item image-stack__item--top'>
-							<img
-								src={igniteMobile}
-								alt='A portrait of a girl under hanging flowers.'
-							/>
-						</div>
-						<div class='image-stack__item image-stack__item--bottom'>
-							<img src={igniteDesktop} alt='' />
-						</div>
-					</div>
-				</PortfolioItem>
+					</PortfolioItem>
+				</Link>
 				<a href='/' className='portfolio-item'>
 					<div class='image-stack'>
 						<div class='image-stack__item image-stack__item--top'>
@@ -164,7 +171,7 @@ const Portfolio = styled(motion.div)`
 	}
 `;
 
-const PortfolioItem = styled(motion.a)`
+const PortfolioItem = styled(motion.div)`
 	h6 {
 		font-size: 1.25em;
 		color: white;

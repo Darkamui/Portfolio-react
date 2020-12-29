@@ -12,7 +12,7 @@ export default function Nav() {
 	return (
 		<header>
 			<div class='logo'>
-				<Link to='/work'>
+				<Link to='/'>
 					<img src={logo} alt='' />
 				</Link>
 			</div>
@@ -22,22 +22,22 @@ export default function Nav() {
 			<nav class='nav'>
 				<ul class='nav__list'>
 					<li class='nav__item' onClick={remove}>
-						<a href='#accueil' class='nav__link'>
+						<a href='/#accueil' class='nav__link'>
 							Accueil
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
-						<a href='#connaissances' class='nav__link'>
+						<a href='/#connaissances' class='nav__link'>
 							Mes Connaissances
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
-						<a href='#projets' class='nav__link'>
+						<a href='/#projets' class='nav__link'>
 							Mes Projets
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
-						<Link to='/work' class='nav__link'>
+						<Link to='/#moi' class='nav__link'>
 							Qui suis-je ?
 						</Link>
 					</li>

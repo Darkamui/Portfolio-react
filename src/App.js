@@ -12,16 +12,15 @@ function App() {
 	return (
 		<div className='App'>
 			<GlobalStyles />
-
+			<Nav />
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route path='/' exact>
-						<Nav />
 						<HomeScreen />
 						<Footer />
 					</Route>
 
-					<Route path='/work'>
+					<Route path='/work' exact>
 						<ProjectTemplate />
 					</Route>
 				</Switch>
