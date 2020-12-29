@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { gsap, Power2, TimelineLite } from "gsap";
+import React from "react";
 import hoodie from "../img/hoodie.jpeg";
 import hats from "../img/hats.jpeg";
 import coverLong from "../img/projecttemp.png";
@@ -9,63 +8,14 @@ import { pageAnimation } from "../animation";
 import { Link } from "react-router-dom";
 
 export default function ProjectTemplate() {
-	const tl = new TimelineLite({ paused: true, reversed: true });
-	const navButton = document.querySelector(".nav-button");
-	let cover = useRef(null);
-	let nav = useRef(null);
-	let navOpen = useRef(null);
-	useEffect(() => {
-		tl.to(cover.current, 1, {
-			width: "60%",
-			ease: Power2.easeOut,
-		})
-			.to(
-				nav.current,
-				1,
-				{
-					height: "100%",
-					ease: Power2.easeOut,
-				},
-				"-=0.5"
-			)
-			.fromTo(
-				navOpen.current,
-				0.5,
-				{
-					opacity: 0,
-					x: 50,
-					ease: Power2.easeOut,
-				},
-				{
-					opacity: 1,
-					x: 0,
-				}
-			);
-	}, []);
-
-	const play = (e) => {
-		if (tl.isActive()) {
-			e.preventDefault();
-			if (e.stopImmediatePropagation) {
-				e.stopImmediatePropagation();
-			}
-
-			return false;
-		} else {
-			toggleTween(tl);
-		}
-	};
-	function toggleTween(tween) {
-		tween.reversed() ? tween.play() : tween.reverse();
-	}
 	return (
 		<Main variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
-			<Nav ref={(nav) => (nav = nav)}>
+			<Nav>
 				<div className='nav-closed'>
 					<h3>Portfolio</h3>
 					<ul className='nav-links'>
 						<li className='nav-button'>
-							<button onClick={play}>
+							<button>
 								<Link to='/'>xShop</Link>
 							</button>
 						</li>
@@ -73,36 +23,31 @@ export default function ProjectTemplate() {
 						<li>Contact</li>
 					</ul>
 				</div>
-				<div className='nav-open' ref={(navOpen) => (navOpen = navOpen)}>
+				<div className='nav-open'>
 					<div className='clothing'>
 						<h2>Clothes</h2>
 						<ul>
 							<li>
-								<a href='#'>Hats</a>
+								<a href='/'>Hats</a>
 							</li>
 							<li>
-								<a href='#'>Swimsuit</a>
+								<a href='/'>Swimsuit</a>
 							</li>
 							<li>
-								<a href='#'>Underwear</a>
+								<a href='/'>Underwear</a>
 							</li>
 							<li>
-								<a href='#'>Misc</a>
+								<a href='/'>Misc</a>
 							</li>
 						</ul>
 					</div>
 					<NavImages className='nav-images'>
 						<img src={hoodie} alt='' />
-						<img src={hats} />
+						<img src={hats} alt='' />
 					</NavImages>
 				</div>
 			</Nav>
-			<img
-				src={coverLong}
-				alt=''
-				className='cover'
-				ref={(cover) => (cover = cover)}
-			/>
+			<img src={coverLong} alt='' className='cover' />
 			<h1 className='cover-date'>03/03/2019</h1>
 		</Main>
 	);
