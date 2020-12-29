@@ -18,25 +18,39 @@ export default function ProjectTemplate() {
 						</div>
 					</Link>
 				</div>
-				<Text className='imge'>
+				<Text className=''>
 					<h4>Fully functional e-commerce app.</h4>
 					<br />
 					<h5>Key features : </h5>
 					<br />
-					<br />
 					<ul>
-						<li>Ability to create/delete/edit users</li>
-						<li>Ability to create/delete/edit products</li>
-						<li>User Authentication with JWT Token</li>
+						<li>- Ability to create/delete/edit users</li>
+						<li>- Ability to create/delete/edit products</li>
+						<li>- Ability to create/delete/orders</li>
+						<li>- Protected admin dashboard</li>
+						<li>- User Authentication with JWT Token</li>
 					</ul>
 					<p>
 						<br />
 						<br />
-						<br />
 					</p>
-					<p>
-						<strong>Derrière les coulisses:</strong> React, Mongodb, Nodejs
-					</p>
+					<h5>Derrière les coulisses :</h5>
+
+					<div className='icons-container'>
+						<div class=''>
+							<i class='fab fa-react'> React</i>
+						</div>
+						<div>
+							<i class='fab fa-html5'> HTML5</i>
+						</div>
+						<div>
+							<i class='fab fa-css3-alt'> CSS3</i>
+						</div>
+						<div>
+							<i class='fab fa-js-square'> JavaScript</i>
+						</div>
+					</div>
+					<a href='jerumedia.netlify.com'>Live Demo</a>
 				</Text>
 			</div>
 		</Main>
@@ -44,14 +58,14 @@ export default function ProjectTemplate() {
 }
 
 const Main = styled(motion.div)`
-	min-height: 100vh;
+	min-height: 80vh;
 	overflow: hidden;
-	padding: 0 5rem;
+	padding: 0 1rem;
 	font-family: "Inconsolata", monospace;
 	.container {
 		display: flex;
 		.imge {
-			width: 50%;
+			width: 60%;
 		}
 		div {
 			margin-right: 15px;
@@ -69,6 +83,35 @@ const Main = styled(motion.div)`
 		width: 100%;
 		object-fit: cover;
 	}
+	.icons-container {
+		display: flex;
+	}
+	.fab {
+		font-size: 1.5em;
+		padding: 1em 0.5em;
+	}
+	@media (max-width: 1500px) {
+		.imge {
+			width: 80%;
+		}
+	}
+	@media (max-width: 1200px) {
+		.container {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.imge {
+				width: 80%;
+			}
+			div {
+				margin-right: 0;
+			}
+			.icons-container {
+				flex-direction: column;
+			}
+		}
+		padding: 0 0.5em;
+	}
 `;
 
 const Text = styled(motion.div)`
@@ -84,10 +127,66 @@ const Text = styled(motion.div)`
 		li {
 			font-size: 1.5em;
 			padding: 0.5em 0.5em 0 0.5em;
+			font-family: "Montserrat", sans-serif;
 		}
 	}
 	p {
 		font-size: 1.5em;
 		padding: 0 0.5em;
+	}
+	a {
+		padding: 1em;
+		font-size: 2em;
+		color: #23d997;
+		text-decoration: none;
+		font-weight: bold;
+		text-align: center;
+	}
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		h4 {
+			font-size: 1.25em;
+		}
+		h5 {
+			font-size: 0.75em;
+		}
+		ul {
+			li {
+				font-size: 1.25em;
+			}
+		}
+
+		p {
+			font-size: 1em;
+		}
+	}
+
+	@media (max-width: 1500px) {
+		display: flex;
+		flex-direction: column;
+
+		h4 {
+			font-size: 1.75em;
+		}
+		h5 {
+			font-size: 1.25em;
+		}
+		li {
+			font-size: 1em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		flex-direction: column;
+		text-align: center;
+		width: 80%;
+		h4 {
+			padding: 1em 0;
+		}
 	}
 `;

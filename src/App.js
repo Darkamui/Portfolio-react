@@ -17,7 +17,6 @@ function App() {
 				<Switch location={location} key={location.pathname}>
 					<Route path='/' exact>
 						<HomeScreen />
-						<Footer />
 					</Route>
 
 					<Route path='/work' exact>
@@ -25,6 +24,7 @@ function App() {
 					</Route>
 				</Switch>
 			</AnimatePresence>
+			<Footer />
 		</div>
 	);
 }
