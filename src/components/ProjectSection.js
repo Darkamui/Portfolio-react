@@ -125,17 +125,24 @@ const Projects = styled(motion.div)`
 	text-align: center;
 	h2 {
 		padding: 1em 0 0 0;
+		color: #16e0bd;
 	}
 	h2::after {
 		content: "";
 		display: block;
-		width: 10%;
+		width: 30%;
 		height: 1px;
 		margin: 0.2em auto 1em;
-		background: #16e0bd;
+		background: white;
 	}
 	p {
 		margin-bottom: 2em;
+	}
+	@media (min-width: 700px) {
+		h2::after {
+			content: "";
+			width: 10%;
+		}
 	}
 `;
 

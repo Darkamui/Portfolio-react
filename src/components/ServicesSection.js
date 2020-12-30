@@ -15,7 +15,7 @@ export default function ServicesSection() {
 				initial='hidden'
 				ref={element}
 				id='connaissances'>
-				<h2>Mes Connaissances</h2>
+				<h2>Connaissances</h2>
 				<Services>
 					<Service>
 						<h3>Front-End</h3>
@@ -73,7 +73,7 @@ const MyServices = styled(motion.div)`
 	text-align: center;
 	padding: 4em 2em;
 	h2 {
-		color: #16e0bd;
+		color: White;
 		position: relative;
 	}
 	h2::after {
@@ -82,13 +82,19 @@ const MyServices = styled(motion.div)`
 		width: 25%;
 		height: 1px;
 		margin: 0.5em auto 1em;
-		background: #fff;
+		background: #16e0bd;
+	}
+	@media (min-width: 700px) {
+		h2::after {
+			width: 10%;
+		}
 	}
 `;
 
 const Services = styled(motion.div)`
 	h3 {
 		padding-bottom: 0.5em;
+		color: #16e0bd;
 	}
 	h3::after {
 		content: "";
@@ -96,7 +102,7 @@ const Services = styled(motion.div)`
 		width: 25%;
 		height: 1px;
 		margin: 0.5em auto 1em;
-		background: #16e0bd;
+		background: white;
 	}
 	@media (min-width: 700px) {
 		display: flex;
@@ -112,7 +118,6 @@ const Services = styled(motion.div)`
 			width: 55%;
 			height: 1px;
 			margin: 0.5em auto 1em;
-			background: #16e0bd;
 		}
 		.service + .service {
 			margin-left: 2em;

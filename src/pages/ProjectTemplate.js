@@ -47,6 +47,12 @@ export default function ProjectTemplate() {
 							<i class='fab fa-css3-alt'> CSS3</i>
 						</div>
 						<div>
+							<i class='fab fa-node-js'> Node JS</i>
+						</div>
+						<div>
+							<i class='fab fa-envira'> MongoDB</i>
+						</div>
+						<div>
 							<i class='fab fa-js-square'> JavaScript</i>
 						</div>
 					</div>
