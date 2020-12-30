@@ -22,7 +22,7 @@ export default function ProjectSection() {
 			animate={controls}
 			initial='hidden'
 			ref={element}>
-			<h2>Mes Projets</h2>
+			<h2>Projets</h2>
 			<Portfolio>
 				<Link to='/fans'>
 					<PortfolioItem>
@@ -73,7 +73,7 @@ export default function ProjectSection() {
 						</div>
 					</PortfolioItem>
 				</Link>
-				<a href='/' className='portfolio-item'>
+				{/* <a href='/' className='portfolio-item'>
 					<div class='image-stack'>
 						<div class='image-stack__item image-stack__item--top'>
 							<img
@@ -112,7 +112,7 @@ export default function ProjectSection() {
 							<img src={fansDesktop} alt='' />
 						</div>
 					</div>
-				</a>
+				</a> */}
 			</Portfolio>
 		</Projects>
 	);

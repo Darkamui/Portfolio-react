@@ -17,7 +17,7 @@ export default function AboutSection() {
 				ref={element}
 				initial='hidden'>
 				<h2>Qui Suis-Je ?</h2>
-				<p className='pyou'>Dévelopeur Full-Stack Junior</p>
+				<p className='pyou'>Développeur Full-Stack Junior</p>
 
 				<div>
 					<p className='movetop'>

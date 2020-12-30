@@ -28,12 +28,12 @@ export default function Nav() {
 					</li>
 					<li class='nav__item' onClick={remove}>
 						<a href='/#connaissances' class='nav__link'>
-							Mes Connaissances
+							Connaissances
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
 						<a href='/#projets' class='nav__link'>
-							Mes Projets
+							Projets
 						</a>
 					</li>
 					<li class='nav__item' onClick={remove}>
