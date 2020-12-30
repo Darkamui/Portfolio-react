@@ -24,7 +24,7 @@ export default function ProjectSection() {
 			ref={element}>
 			<h2>Mes Projets</h2>
 			<Portfolio>
-				<Link to='/work'>
+				<Link to='/fans'>
 					<PortfolioItem>
 						<h6>FANCY Hand Fans</h6>
 						<div class='image-stack'>
@@ -41,7 +41,7 @@ export default function ProjectSection() {
 						</div>
 					</PortfolioItem>
 				</Link>
-				<Link to='/work'>
+				<Link to='/jerusalmy'>
 					<PortfolioItem>
 						<h6>Raphaël Jerusalmy</h6>
 						<div class='image-stack'>

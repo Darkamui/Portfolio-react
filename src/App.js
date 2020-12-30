@@ -6,12 +6,16 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import ScrollTop from "./components/ScrollTop";
+import ProjectJerusalmy from "./pages/ProjectJerusalmy";
 
 function App() {
 	const location = useLocation();
 	return (
 		<div className='App'>
 			<GlobalStyles />
+
+			<ScrollTop></ScrollTop>
 			<Nav />
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
@@ -19,8 +23,12 @@ function App() {
 						<HomeScreen />
 					</Route>
 
-					<Route path='/work' exact>
+					<Route path='/fans' exact>
 						<ProjectTemplate />
+					</Route>
+
+					<Route path='/jerusalmy' exact>
+						<ProjectJerusalmy />
 					</Route>
 				</Switch>
 			</AnimatePresence>

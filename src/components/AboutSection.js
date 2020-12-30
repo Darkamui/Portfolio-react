@@ -46,8 +46,11 @@ const About = styled(motion.div)`
 	p:first-child {
 		margin-bottom: 1em;
 	}
+	@media (min-width: 350px) {
+		max-width: 250px;
+	}
 	@media (min-width: 450px) {
-		max-width: 300px;
+		max-width: 400px;
 	}
 	@media (min-width: 700px) {
 		padding: 5em 0;

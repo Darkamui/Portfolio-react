@@ -1,5 +1,5 @@
 import React from "react";
-import coverLong from "../img/projecttemp.png";
+import coverLong from "../img/fancy.gif";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
@@ -12,11 +12,9 @@ export default function ProjectTemplate() {
 			<motion.div variants={lineAnim} className='line'></motion.div>
 			<div className='container'>
 				<div className='imge'>
-					<Link>
-						<div className='nani'>
-							<motion.img variants={photoAnim} src={coverLong} alt='' />
-						</div>
-					</Link>
+					<div className='nani'>
+						<motion.img variants={photoAnim} src={coverLong} alt='' />
+					</div>
 				</div>
 				<Text className=''>
 					<h4>Fully functional e-commerce app.</h4>
@@ -30,10 +28,10 @@ export default function ProjectTemplate() {
 						<li>- Protected admin dashboard</li>
 						<li>- User Authentication with JWT Token</li>
 					</ul>
-					<p>
-						<br />
-						<br />
-					</p>
+					<p></p>
+					<a target='_blank' href='https://my-fhf-app.herokuapp.com'>
+						Live Demo
+					</a>
 					<h5>Derrière les coulisses :</h5>
 
 					<div className='icons-container'>
@@ -50,7 +48,6 @@ export default function ProjectTemplate() {
 							<i class='fab fa-js-square'> JavaScript</i>
 						</div>
 					</div>
-					<a href='jerumedia.netlify.com'>Live Demo</a>
 				</Text>
 			</div>
 		</Main>
@@ -60,7 +57,7 @@ export default function ProjectTemplate() {
 const Main = styled(motion.div)`
 	min-height: 80vh;
 	overflow: hidden;
-	padding: 0 1rem;
+	padding: 0 5rem 1em 5em;
 	font-family: "Inconsolata", monospace;
 	.container {
 		display: flex;
@@ -85,6 +82,7 @@ const Main = styled(motion.div)`
 	}
 	.icons-container {
 		display: flex;
+		justify-content: center;
 	}
 	.fab {
 		font-size: 1.5em;
@@ -115,12 +113,15 @@ const Main = styled(motion.div)`
 `;
 
 const Text = styled(motion.div)`
+	display: flex;
+	flex-direction: column;
 	h4 {
 		font-size: 2.5em;
 	}
 	h5 {
 		font-size: 2em;
 		padding-left: 0.05em;
+		text-align: center;
 	}
 	ul {
 		list-style: none;
@@ -143,8 +144,6 @@ const Text = styled(motion.div)`
 		text-align: center;
 	}
 	@media (max-width: 500px) {
-		display: flex;
-		flex-direction: column;
 		padding: 0;
 		h4 {
 			font-size: 1.25em;
