@@ -3,7 +3,6 @@ import coverLong from "../img/fancy.gif";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
-import { Link } from "react-router-dom";
 
 export default function ProjectJerusalmy() {
 	return (
@@ -29,7 +28,10 @@ export default function ProjectJerusalmy() {
 						<li>- User Authentication with JWT Token</li>
 					</ul>
 					<p></p>
-					<a target='_blank' href='https://jerusalmy.netlify.com'>
+					<a
+						target='_blank'
+						rel='noreferrer'
+						href='https://jerusalmy.netlify.com'>
 						Live Demo
 					</a>
 					<h5>Derrière les coulisses :</h5>
