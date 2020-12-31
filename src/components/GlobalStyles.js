@@ -44,6 +44,10 @@ header {
 }
 .logo {
 	max-width: 100px;
+	justify-content: center;
+	align-items: center;
+	display: flex; 
+	flex-direction: column;
 }
 .nav {
 	position: fixed;

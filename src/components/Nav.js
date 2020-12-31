@@ -22,15 +22,16 @@ export default function Nav() {
 				<Link to='/'>
 					<img src={logo} alt='' />
 				</Link>
+				<div>
+					<Button onClick={() => changeLanguage("fr")}>Fr</Button>
+					<Button onClick={() => changeLanguage("en")}>En</Button>
+				</div>
 			</div>
 
 			<button class='nav-toggle' onClick={testy} aria-label='toggle navigation'>
 				<span class='hamburger'></span>
 			</button>
-			<div>
-				<Button onClick={() => changeLanguage("fr")}>Fr</Button>
-				<Button onClick={() => changeLanguage("en")}>En</Button>
-			</div>
+
 			<nav class='nav'>
 				<ul class='nav__list'>
 					<li class='nav__item' onClick={remove}>
@@ -63,6 +64,7 @@ const Button = styled.button`
 	background: transparent;
 	font-size: 1.25em;
 	padding: 0.5em;
+	margin-left: 0.25em;
 	cursor: pointer;
 	background: aliceblue;
 	font-weight: bold;
