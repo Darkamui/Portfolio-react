@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../img/jerumedia.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import styled from "styled-components";
 
 export default function Nav() {
 	const testy = () => {
@@ -9,6 +11,11 @@ export default function Nav() {
 	const remove = () => {
 		document.body.classList.remove("nav-open");
 	};
+	const { i18n } = useTranslation();
+
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	};
 	return (
 		<header>
 			<div class='logo'>
@@ -16,9 +23,14 @@ export default function Nav() {
 					<img src={logo} alt='' />
 				</Link>
 			</div>
+
 			<button class='nav-toggle' onClick={testy} aria-label='toggle navigation'>
 				<span class='hamburger'></span>
 			</button>
+			<div>
+				<Button onClick={() => changeLanguage("fr")}>Fr</Button>
+				<Button onClick={() => changeLanguage("en")}>En</Button>
+			</div>
 			<nav class='nav'>
 				<ul class='nav__list'>
 					<li class='nav__item' onClick={remove}>
@@ -46,3 +58,16 @@ export default function Nav() {
 		</header>
 	);
 }
+
+const Button = styled.button`
+	background: transparent;
+	font-size: 1.25em;
+	padding: 0.5em;
+	cursor: pointer;
+	background: aliceblue;
+	font-weight: bold;
+	:hover {
+		background: black;
+		color: white;
+	}
+`;

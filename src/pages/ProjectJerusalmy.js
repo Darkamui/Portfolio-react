@@ -3,8 +3,10 @@ import coverLong from "../img/fancy.gif";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectJerusalmy() {
+	const { t } = useTranslation();
 	return (
 		<Main variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
 			<motion.h2 variants={fade}>Raphaël Jerusalmy</motion.h2>
@@ -16,16 +18,14 @@ export default function ProjectJerusalmy() {
 					</div>
 				</div>
 				<Text className=''>
-					<h4>Site exemple pour personne/marque connue</h4>
+					<h4>{t("Jerusalmy-title")}</h4>
 					<br />
-					<h5>Caractéristiques clées : </h5>
+					<h5>{t("Project-features")}</h5>
 					<br />
 					<ul>
-						<li>- Rendement dynamique des pages</li>
-						<li>- Implémentation de Sass</li>
-						<li>- Design adaptatif pour différents formats d'écrans</li>
-						<li>- Protected admin dashboard</li>
-						<li>- User Authentication with JWT Token</li>
+						<li>{t("Jerusalmy-li1")}</li>
+						<li>{t("Jerusalmy-li2")}</li>
+						<li>{t("Jerusalmy-li3")}</li>
 					</ul>
 					<p></p>
 					<a
@@ -34,7 +34,7 @@ export default function ProjectJerusalmy() {
 						href='https://jerusalmy.netlify.com'>
 						Live Demo
 					</a>
-					<h5>Derrière les coulisses :</h5>
+					<h5>{t("Project-languages")}</h5>
 
 					<div className='icons-container'>
 						<div class=''>
@@ -122,11 +122,29 @@ const Text = styled(motion.div)`
 	flex-direction: column;
 	h4 {
 		font-size: 2.5em;
+		text-align: center;
+	}
+	h4::after {
+		content: "";
+		display: block;
+		width: 65%;
+		height: 1px;
+		margin: 0.5em auto 0.05em;
+		background: #16e0bd;
 	}
 	h5 {
 		font-size: 2em;
+		padding-top: 0.25em;
 		padding-left: 0.05em;
 		text-align: center;
+	}
+	h5::after {
+		content: "";
+		display: block;
+		width: 45%;
+		height: 1px;
+		margin: 0.5em auto 1em;
+		background: #16e0bd;
 	}
 	ul {
 		list-style: none;

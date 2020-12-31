@@ -4,8 +4,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { fadeReverse } from "../animation";
+import { useTranslation } from "react-i18next";
 
 export default function AboutSection() {
+	const { t } = useTranslation();
 	const [element, controls] = useScroll();
 
 	return (
@@ -16,18 +18,12 @@ export default function AboutSection() {
 				animate={controls}
 				ref={element}
 				initial='hidden'>
-				<h2>Qui Suis-Je ?</h2>
-				<p className='pyou'>Développeur Full-Stack Junior</p>
+				<h2>{t("About-title")}</h2>
+				<p className='pyou'>{t("About-subtitle")}</p>
 
 				<div>
-					<p className='movetop'>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum,
-						itaque!
-					</p>
-					<p className='movetop'>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
-						enim.
-					</p>
+					<p className='movetop'>{t("About-text1")}</p>
+					<p className='movetop'>{t("About-text2")}</p>
 				</div>
 				<IntroImg src={danny}></IntroImg>
 			</About>

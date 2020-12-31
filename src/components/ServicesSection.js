@@ -4,8 +4,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { fadeReverse } from "../animation";
+import { useTranslation } from "react-i18next";
 
 export default function ServicesSection() {
+	const { t } = useTranslation();
 	const [element, controls] = useScroll();
 	return (
 		<div className='nani'>
@@ -15,7 +17,7 @@ export default function ServicesSection() {
 				initial='hidden'
 				ref={element}
 				id='connaissances'>
-				<h2>Connaissances</h2>
+				<h2>{t("Skills-title")}</h2>
 				<Services>
 					<Service>
 						<h3>Front-End</h3>
@@ -50,7 +52,7 @@ export default function ServicesSection() {
 					</Service>
 
 					<Service>
-						<h3>En Apprentissage</h3>
+						<h3>{t("Skills-learning")}</h3>
 						<div>
 							<i class='fab fa-vuejs'> Vue.JS</i>
 						</div>

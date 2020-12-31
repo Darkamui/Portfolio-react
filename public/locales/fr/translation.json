@@ -1,0 +1,25 @@
+{
+    "TitleSection-name": "Bonjour, Ici",
+    "TitleSection-subtitle" : "Développeur Full-Stack Junior",
+    "Skills-title" : "Connaissances",
+    "Skills-learning" : "En Apprentissage",
+    "Projects-title" : "Projets",
+    "Projects-RAWG" : "RAWG API Librarie de jeux",
+    "About-title" : "Qui Suis-Je ?",
+    "About-subtitle" : "Roi de poupinets",
+    "About-text1" : "French ipsum dolor sit, amet consectetur adipisicing elit. Laborum, itaque!",
+    "About-text2" : "French ipsum dolor sit, amet consectetur adipisicing elit. Laborum, itaque!",
+    "FHF-title": "Plateforme E-commerce intégrale",
+    "Project-features" : "Caractéristiques clés : ",
+    "Project-languages" : "Derrière les coulisses : ",
+    "FHF-li1" : "- Création/édition/suppression d'utilisateurs",
+    "FHF-li2" : "- Création/édition/suppression de produits",
+    "FHF-li3" : "- Création/édition/suppression de commandes",
+    "FHF-li4" : "- Interface de gestionnaire protegée",
+    "FHF-li5" : "- Authentification d'utilisateurs JWT",
+    "Jerusalmy-title" : "Site de promotion pour personnalité connue",
+    "Jerusalmy-li1" : "- Rendement dynamique des pages",
+    "Jerusalmy-li2" : "- Utilisation de Sass pour division et clarté de style",
+    "Jerusalmy-li3" : "- Interface graphique adaptatif pour différents formats d'écrans"
+
+}

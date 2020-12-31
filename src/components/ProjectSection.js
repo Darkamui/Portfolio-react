@@ -12,8 +12,10 @@ import jerusalmyMobile from "../img/jerusalmy-mobile.png";
 import { useScroll } from "./useScroll";
 import { fade } from "../animation";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectSection() {
+	const { t } = useTranslation();
 	const [element, controls] = useScroll();
 	return (
 		<Projects
@@ -22,7 +24,7 @@ export default function ProjectSection() {
 			animate={controls}
 			initial='hidden'
 			ref={element}>
-			<h2>Projets</h2>
+			<h2>{t("Projects-title")}</h2>
 			<Portfolio>
 				<Link to='/fans'>
 					<PortfolioItem>
@@ -59,7 +61,7 @@ export default function ProjectSection() {
 				</Link>
 				<Link to='/work'>
 					<PortfolioItem>
-						<h6>RAWG API Game Library</h6>
+						<h6>{t("Projects-RAWG")}</h6>
 						<div class='image-stack'>
 							<div class='image-stack__item image-stack__item--top'>
 								<img

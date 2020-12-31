@@ -3,8 +3,10 @@ import coverLong from "../img/fancy.gif";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectTemplate() {
+	const { t } = useTranslation();
 	return (
 		<Main variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
 			<motion.h2 variants={fade}>FANCY Hand Fans</motion.h2>
@@ -16,16 +18,16 @@ export default function ProjectTemplate() {
 					</div>
 				</div>
 				<Text className=''>
-					<h4>Fully functional e-commerce app.</h4>
+					<h4>{t("FHF-title")}</h4>
 					<br />
-					<h5>Key features : </h5>
+					<h5>{t("Project-features")}</h5>
 					<br />
 					<ul>
-						<li>- Ability to create/delete/edit users</li>
-						<li>- Ability to create/delete/edit products</li>
-						<li>- Ability to create/delete/orders</li>
-						<li>- Protected admin dashboard</li>
-						<li>- User Authentication with JWT Token</li>
+						<li>{t("FHF-li1")}</li>
+						<li>{t("FHF-li2")}</li>
+						<li>{t("FHF-li3")}</li>
+						<li>{t("FHF-li4")}</li>
+						<li>{t("FHF-li5")}</li>
 					</ul>
 					<p></p>
 					<a
@@ -34,7 +36,7 @@ export default function ProjectTemplate() {
 						href='https://my-fhf-app.herokuapp.com'>
 						Live Demo
 					</a>
-					<h5>Derrière les coulisses :</h5>
+					<h5>{t("Project-languages")}</h5>
 
 					<div className='icons-container'>
 						<div class=''>
@@ -91,6 +93,7 @@ const Main = styled(motion.div)`
 	.icons-container {
 		display: flex;
 		justify-content: center;
+		padding: 1em 0;
 	}
 	.fab {
 		font-size: 1.5em;
@@ -125,11 +128,28 @@ const Text = styled(motion.div)`
 	flex-direction: column;
 	h4 {
 		font-size: 2.5em;
+		text-align: center;
+	}
+	h4::after {
+		content: "";
+		display: block;
+		width: 65%;
+		height: 1px;
+		margin: 0.5em auto 0.05em;
+		background: #16e0bd;
 	}
 	h5 {
 		font-size: 2em;
-		padding-left: 0.05em;
+		padding-top: 0.25em;
 		text-align: center;
+	}
+	h5::after {
+		content: "";
+		display: block;
+		width: 45%;
+		height: 1px;
+		margin: 0.5em auto 1em;
+		background: #16e0bd;
 	}
 	ul {
 		list-style: none;

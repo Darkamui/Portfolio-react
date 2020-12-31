@@ -1,0 +1,25 @@
+{
+    "TitleSection-name": "Hi, I'm",
+    "TitleSection-subtitle" : "Junior Full-Stack Developer",
+    "Skills-title" : "What I Know",
+    "Skills-learning" : "Currently learning",
+    "Projects-title" : "Projects",
+    "Projects-RAWG" : "RAWG API Game Library",
+    "About-title" : "Who Am I ?",
+    "About-subtitle" : "King of darkness",
+    "About-text1" : "English ipsum dolor sit, amet consectetur adipisicing elit. Laborum, itaque!",
+    "About-text2" : "English ipsum dolor sit, amet consectetur adipisicing elit. Laborum, itaque!",
+    "FHF-title": "Fully functional E-commerce platform",
+    "Project-features" : "Key features : ",
+    "Project-languages" : "Behind the scenes :",
+    "FHF-li1" : "- Create/Read/Update/Delete (CRUD) users",
+    "FHF-li2" : "- CRUD products ",
+    "FHF-li3" : "- CRUD orders",
+    "FHF-li4" : "- Protected admin dashboard",
+    "FHF-li5" : "- User Authentication with JWT",
+    "Jerusalmy-title" : "Promotion site for a celebrity",
+    "Jerusalmy-li1" : "- Pages rendered dynamically",
+    "Jerusalmy-li2" : "- Sass implementation for clean and organized styles",
+    "Jerusalmy-li3" : "- Responsive web design"
+
+}

@@ -2,14 +2,18 @@ import React from "react";
 import danny from "../img/n.jpg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function TitleSection() {
+	const { t } = useTranslation();
+
 	return (
 		<Intro id='accueil'>
 			<h1>
-				Bonjour, Ici<strong>Daniel Jerusalmy</strong>
+				{t("TitleSection-name")}
+				<strong>Daniel Jerusalmy</strong>
 			</h1>
-			<p>Développeur Full-Stack Junior</p>
+			<p>{t("TitleSection-subtitle")}</p>
 			<IntroImg src={danny}></IntroImg>
 		</Intro>
 	);
