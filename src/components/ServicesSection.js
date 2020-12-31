@@ -41,7 +41,7 @@ export default function ServicesSection() {
 					<Service>
 						<h3>Back-End</h3>
 						<div>
-							<i class='fab fa-node-js'> Node JS</i>
+							<i class='fab fa-node-js'> NodeJS</i>
 						</div>
 						<div>
 							<i class='fab fa-envira'> MongoDB</i>
@@ -54,7 +54,7 @@ export default function ServicesSection() {
 					<Service>
 						<h3>{t("Skills-learning")}</h3>
 						<div>
-							<i class='fab fa-vuejs'> Vue.JS</i>
+							<i class='fab fa-vuejs'> Vue</i>
 						</div>
 						<div>
 							<i class='fab fa-angular'> Angular</i>
