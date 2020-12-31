@@ -1,5 +1,5 @@
 import React from "react";
-import coverLong from "../img/fancy.gif";
+import coverLong from "../img/jerusalmy.gif";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
