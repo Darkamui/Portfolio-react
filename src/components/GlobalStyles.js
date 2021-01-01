@@ -9,7 +9,10 @@ const GlobalStyles = createGlobalStyle`
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	@media(max-width: 1650px){
+		font-size: 80%;
+	}
 }
 .nani{
     overflow:hidden;

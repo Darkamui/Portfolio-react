@@ -102,6 +102,8 @@ const Main = styled(motion.div)`
 	@media (max-width: 1500px) {
 		.imge {
 			width: 80%;
+			display: flex;
+			align-items: center;
 		}
 	}
 	@media (max-width: 1200px) {
