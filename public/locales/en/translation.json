@@ -20,6 +20,10 @@
     "Jerusalmy-title" : "Promotion site for a celebrity",
     "Jerusalmy-li1" : "- Pages rendered dynamically",
     "Jerusalmy-li2" : "- Sass implementation for clean and organized styles",
-    "Jerusalmy-li3" : "- Responsive web design"
+    "Jerusalmy-li3" : "- Responsive web design",
+    "RAWG-title" : "RAWG API Game Library",
+    "RAWG-li1" : "- Pages rendered dynamically with data from external API",
+    "RAWG-li2" : "- Use of Styled Components for re-usability",
+    "RAWG-li3" : "- Responsive web design"
 
 }

@@ -4,7 +4,7 @@
     "Skills-title" : "Connaissances",
     "Skills-learning" : "En Apprentissage",
     "Projects-title" : "Projets",
-    "Projects-RAWG" : "RAWG API Librarie de jeux",
+    "Projects-RAWG" : "RAWG API Librairie de jeux",
     "About-title" : "Qui Suis-Je ?",
     "About-subtitle" : "Roi de poupinets",
     "About-text1" : "French ipsum dolor sit, amet consectetur adipisicing elit. Laborum, itaque!",
@@ -20,6 +20,10 @@
     "Jerusalmy-title" : "Site de promotion pour personnalité connue",
     "Jerusalmy-li1" : "- Rendement dynamique des pages",
     "Jerusalmy-li2" : "- Utilisation de Sass pour division et clarté de style",
-    "Jerusalmy-li3" : "- Interface graphique adaptatif pour différents formats d'écrans"
+    "Jerusalmy-li3" : "- Design adaptatif pour différents formats d'écrans",
+    "RAWG-title" : "RAWG API Librairie de jeux",
+    "RAWG-li1" : "- Rendement dynamique des pages avec des données d'API étranger",
+    "RAWG-li2" : "- Utilisation de Styled Components",
+    "RAWG-li3" : "- Design adaptatif pour différents formats d'écrans"
 
 }

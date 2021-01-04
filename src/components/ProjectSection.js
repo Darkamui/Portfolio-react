@@ -59,7 +59,7 @@ export default function ProjectSection() {
 						</div>
 					</PortfolioItem>
 				</Link>
-				<Link to='/work'>
+				<Link to='/rawg'>
 					<PortfolioItem>
 						<h6>{t("Projects-RAWG")}</h6>
 						<div class='image-stack'>

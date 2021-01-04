@@ -8,6 +8,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ScrollTop from "./components/ScrollTop";
 import ProjectJerusalmy from "./pages/ProjectJerusalmy";
+import ProjectRAWG from "./pages/ProjectRAWG";
 
 function App() {
 	const location = useLocation();
@@ -29,6 +30,10 @@ function App() {
 
 					<Route path='/jerusalmy' exact>
 						<ProjectJerusalmy />
+					</Route>
+
+					<Route path='/rawg' exact>
+						<ProjectRAWG />
 					</Route>
 				</Switch>
 			</AnimatePresence>
